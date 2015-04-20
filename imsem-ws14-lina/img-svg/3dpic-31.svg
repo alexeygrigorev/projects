@@ -10,10 +10,10 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   height="408.49997"
+   height="368.5"
    version="1.1"
-   viewBox="0 0 502.2 326.79997"
-   width="627.75"
+   viewBox="0 0 454.2 294.79999"
+   width="567.75"
    id="svg2"
    inkscape:version="0.48.4 r9939"
    sodipodi:docname="3dpic-31.svg">
@@ -41,13 +41,13 @@
      inkscape:window-height="716"
      id="namedview653"
      showgrid="false"
-     fit-margin-top="-10"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0"
+     fit-margin-top="-30"
+     fit-margin-left="-20"
+     fit-margin-right="-40"
+     fit-margin-bottom="-20"
      inkscape:zoom="0.99867921"
      inkscape:cx="309.41798"
-     inkscape:cy="233.57892"
+     inkscape:cy="213.57885"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -64,7 +64,7 @@
   <g
      style="stroke-linecap:butt;stroke-linejoin:round"
      id="pane3d_1"
-     transform="translate(-81,-51.200002)">
+     transform="translate(-97,-67.200006)">
     <g
        style="stroke-linecap:butt;stroke-linejoin:round"
        id="patch_3">
@@ -78,7 +78,7 @@
   <g
      style="stroke-linecap:butt;stroke-linejoin:round"
      id="pane3d_2"
-     transform="translate(-81,-51.200002)">
+     transform="translate(-97,-67.200006)">
     <g
        style="stroke-linecap:butt;stroke-linejoin:round"
        id="patch_4">
@@ -92,7 +92,7 @@
   <g
      style="stroke-linecap:butt;stroke-linejoin:round"
      id="pane3d_3"
-     transform="translate(-81,-51.200002)">
+     transform="translate(-97,-67.200006)">
     <g
        style="stroke-linecap:butt;stroke-linejoin:round"
        id="patch_5">
@@ -106,7 +106,7 @@
   <g
      style="stroke-linecap:butt;stroke-linejoin:round"
      id="axis3d_1"
-     transform="translate(-81,-51.200002)">
+     transform="translate(-97,-67.200006)">
     <g
        style="stroke-linecap:butt;stroke-linejoin:round"
        id="line2d_1">
@@ -762,7 +762,7 @@
   <g
      style="stroke-linecap:butt;stroke-linejoin:round"
      id="axis3d_2"
-     transform="translate(-81,-51.200002)">
+     transform="translate(-97,-67.200006)">
     <g
        style="stroke-linecap:butt;stroke-linejoin:round"
        id="line2d_11">
@@ -1382,7 +1382,7 @@
   <g
      style="stroke-linecap:butt;stroke-linejoin:round"
      id="axis3d_3"
-     transform="translate(-81,-51.200002)">
+     transform="translate(-97,-67.200006)">
     <g
        style="stroke-linecap:butt;stroke-linejoin:round"
        id="line2d_21">
@@ -2002,7 +2002,7 @@
   <g
      style="stroke-linecap:butt;stroke-linejoin:round"
      id="axes_1"
-     transform="translate(-81,-51.200002)">
+     transform="translate(-97,-67.200006)">
     <g
        style="stroke-linecap:butt;stroke-linejoin:round"
        id="Path3DCollection_1">
