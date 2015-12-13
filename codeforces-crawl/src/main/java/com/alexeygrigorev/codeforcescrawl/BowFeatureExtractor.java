@@ -10,7 +10,6 @@ import java.io.StringReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,24 +26,30 @@ public class BowFeatureExtractor {
 
     File file = new File("out.json.gz");
     try (OutputStream os = new BufferedOutputStream(new FileOutputStream(file))) {
-      PrintWriter pw = new PrintWriter(new GZIPOutputStream(os, false));
-
-      int cnt = 0;
-
-      for (Submission submission : submissoins) {
-        List<String> tokens = tokenize(submission.source);
-
-        Map<String, Object> json = new HashMap<>();
-        json.put("submission_id", submission.submissionId);
-        json.put("source", tokens);
-        json.put("language", submission.language);
-
-        pw.println(JSON.std.asString(json));
-
-        cnt++;
-        if (cnt % 2500 == 0) {
-          System.out.println("processing " + cnt + "th submission...");
+      try (GZIPOutputStream gzip = new GZIPOutputStream(os, false)) {
+        try (PrintWriter pw = new PrintWriter(gzip)) {
+          writeSubmissions(pw, submissoins);
         }
+      }
+    }
+  }
+
+  public static void writeSubmissions(PrintWriter pw, List<Submission> submissoins) throws Exception {
+    int cnt = 0;
+
+    for (Submission submission : submissoins) {
+      List<String> tokens = tokenize(submission.source);
+
+      Map<String, Object> json = new HashMap<>();
+      json.put("submission_id", submission.submissionId);
+      json.put("source", tokens);
+      json.put("language", submission.language);
+
+      pw.println(JSON.std.asString(json));
+
+      cnt++;
+      if (cnt % 2500 == 0) {
+        System.out.println("processing " + cnt + "th submission...");
       }
     }
   }
@@ -101,7 +106,7 @@ public class BowFeatureExtractor {
     return result;
   }
 
-  private static List<Submission> extract() throws ClassNotFoundException, SQLException {
+  private static List<Submission> extract() throws Exception {
     String query = "select submission_id, source, language, status from submissions";
 
     Class.forName("com.mysql.jdbc.Driver");
